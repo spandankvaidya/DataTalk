@@ -112,15 +112,15 @@ st.title("⚡ Global Energy Statistics Lookup")
 st.info(
     "**About this Dataset:**\n\n"
     "This database contains global energy statistics across multiple countries and years. "
-    "It has 7 columns: country_or_area, commodity_transaction, year, unit, quantity, quantity_footnotes, category"
-    "You can ask questions about export/import quantities, energy categories (like 'Additives and oxygenates'), "
-    "and compare data between different nations." 
+    "It has 7 columns: country_or_area, commodity_transaction, year, unit, quantity, quantity_footnotes, category. "
+    "You can ask questions about export/import quantities, on different categories (like 'Additives and oxygenates', 'Gas Refinery', 'Electricity', etc.), "
+    "and compare data between different nations. " 
     "A sample question could be; 'In which year did Germany generate the highest energy (in units) from Solar photovoltaic cells'"
 )
 
 # User Input Form
 with st.form("query_form"):
-    user_query = st.text_input("Ask a question in plain English:", placeholder="e.g., Which country exported the most additives of oxygen?")
+    user_query = st.text_input("Ask a question in plain English, oder auch auf Deutsch ;)", placeholder="e.g., Which country exported the most additives of oxygen?")
     submitted = st.form_submit_button("Search Database")
 
 # Execution and Results Display

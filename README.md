@@ -1,17 +1,8 @@
 # DataTalk: Natural Language Lookup on Global Energy Statistics
 
 <div>
-  <a href="https://streamlit.io/">
-    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
-  </a>
   <a href="https://www.langchain.com/">
     <img src="https://img.shields.io/badge/LangChain-A473E8?style=for-the-badge" alt="LangChain" />
-  </a>
-  <a href="https://langchain-ai.github.io/langgraph/">
-    <img src="https://img.shields.io/badge/LangGraph-A473E8?style=for-the-badge" alt="LangGraph" />
-  </a>
-  <a href="https://groq.com/">
-    <img src="https://img.shields.io/badge/Groq-000000?style=for-the-badge" alt="Groq" />
   </a>
   <a href="https://pola.rs/">
     <img src="https://img.shields.io/badge/Polars-1D2B3A?style=for-the-badge" alt="Polars" />
@@ -22,15 +13,24 @@
   <a href="https://www.sqlite.org/">
     <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
   </a>
+  <a href="https://streamlit.io/">
+    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+  </a>
+  </a>
+  <a href="https://groq.com/">
+    <img src="https://img.shields.io/badge/Groq-000000?style=for-the-badge" alt="Groq" />
+  </a>
+  <a href="https://langchain-ai.github.io/langgraph/">
+    <img src="https://img.shields.io/badge/LangGraph-A473E8?style=for-the-badge" alt="LangGraph" />
 </div>
 
 ## Tech Stack & Components
 
 * **Frontend (Streamlit):** Handles the UI, state caching, and responsive data presentation.
-* **Data Processing (Polars & PyArrow):** Used to compress the initial 135 MB CSV into a highly optimized Parquet file, bypassing GitHub file limits while strictly enforcing column data types for stability.
+* **Data Processing (Polars & PyArrow):** Used to compress the initial 135 MB CSV into a highly optimized Parquet file (2.5 MB), bypassing GitHub file limits while strictly enforcing column data types for stability.
 * **Database (SQLite):** Acts as the localized relational database, rapidly ingesting the Parquet data via a high-speed ADBC driver.
 * **Agent Orchestration (LangGraph):** Manages the looping, stateful execution flow between the LLM and the database tools.
-* **LLM Engine (Groq & LangChain):** Connects the application to the `gemma2-9b-it` model, enabling near-instantaneous reasoning and precise Text-to-SQL translation.
+* **LLM Engine (Groq & LangChain):** Connects the application to the `llama-3.3-70B-versatile` model, enabling near-instantaneous reasoning and precise Text-to-SQL translation.
 * **Deployment (Render):** Cloud-hosted.
 
 ## The Agentic Workflow

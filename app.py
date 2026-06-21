@@ -30,7 +30,7 @@ def setup_backend():
     api_key = os.environ.get("GROQ_API_KEY")
     # 2. Load Data via Polars
     if not os.path.exists(db_path):
-        df = pl.read_csv(csv_path, infer_schema_length=10000)
+        df = pl.read_parquet("all_energy_statistics.parquet")
         new_columns = {
             col: col.strip().lower().replace(" ", "_").replace("/", "_") 
             for col in df.columns

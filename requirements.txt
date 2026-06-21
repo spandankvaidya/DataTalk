@@ -1,0 +1,7 @@
+streamlit
+langgraph
+langchain
+langchain-community
+langchain-groq
+polars
+adbc-driver-sqlite

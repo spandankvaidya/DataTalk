@@ -1,5 +1,4 @@
-# DataTalk: Natural Language Lookup on Global Energy Statistics
-
+# [DataTalk: Natural Language Lookup on Global Energy Statistics](https://datatalk-vgex.onrender.com/)
 <div>
   <a href="https://www.langchain.com/">
     <img src="https://img.shields.io/badge/LangChain-A473E8?style=for-the-badge" alt="LangChain" />
@@ -23,7 +22,9 @@
   <a href="https://langchain-ai.github.io/langgraph/">
     <img src="https://img.shields.io/badge/LangGraph-A473E8?style=for-the-badge" alt="LangGraph" />
 </div>
+<br />
 
+![DataTalk Webservice Interface](webservice_ss.png)
 ## Tech Stack & Components
 
 * **Frontend (Streamlit):** Handles the UI, state caching, and responsive data presentation.

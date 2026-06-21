@@ -114,7 +114,7 @@ st.info(
     "https://www.kaggle.com/datasets/unitednations/international-energy-statistics "
     "This database contains global energy statistics across multiple countries and years. "
     "It has 7 columns: country_or_area, commodity_transaction, year, unit, quantity, quantity_footnotes, category. "
-    "You can ask questions about export/import quantities, on different categories (like 'Additives and oxygenates', 'Gas Refinery', 'Electricity', etc.), "
+    "You can ask questions about export/import quantities, on different topics (like 'Additives and oxygenates', 'Gas Refinery', 'Electricity', etc.), "
     "and compare data between different nations. " 
     "A sample question could be; 'In which year did Germany generate the highest energy (in units) from Solar photovoltaic cells'"
 )
@@ -149,3 +149,16 @@ if submitted and user_query:
         with col2:
             st.subheader("Generated SQL Query")
             st.code(generated_sql, language="sql")
+# =====================================================================
+# FOOTER
+# =====================================================================
+st.markdown("---") 
+
+st.markdown(
+    """
+    <div style="text-align: left; margin-top: 20px; color: gray;">
+        made by <a href="https://www.linkedin.com/in/spandan-vaidya19/" target="_blank" style="text-decoration: none; color: #4CAF50;">spandankvaidya</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)

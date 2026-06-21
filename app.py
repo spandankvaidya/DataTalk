@@ -106,11 +106,12 @@ except Exception as e:
 # =====================================================================
 # FRONTEND LAYOUT
 # =====================================================================
-st.title("⚡ Global Energy Statistics Lookup")
+st.title("DataTalk: Natural Language Lookup on Global Energy Statistics")
 
 # Informational Context Box
 st.info(
     "**About this Dataset:**\n\n"
+    "https://www.kaggle.com/datasets/unitednations/international-energy-statistics "
     "This database contains global energy statistics across multiple countries and years. "
     "It has 7 columns: country_or_area, commodity_transaction, year, unit, quantity, quantity_footnotes, category. "
     "You can ask questions about export/import quantities, on different categories (like 'Additives and oxygenates', 'Gas Refinery', 'Electricity', etc.), "
@@ -142,9 +143,9 @@ if submitted and user_query:
         col1, col2 = st.columns(2)
 
         with col1:
-            st.subheader("🤖 AI Response")
+            st.subheader("DataTalk Response")
             st.write(final_answer)
 
         with col2:
-            st.subheader("🔍 Generated SQL Query")
+            st.subheader("Generated SQL Query")
             st.code(generated_sql, language="sql")
